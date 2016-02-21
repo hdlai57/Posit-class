@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+root 'posts#index'
+
+resources :posts do
+  resources :comments
+end
   # Example resource route with options:
   #   resources :products do
   #     member do
